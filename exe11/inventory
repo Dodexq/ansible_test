@@ -1,0 +1,14 @@
+[websrvgrp]
+web01 ansible_host=192.168.56.71 
+web02 ansible_host=192.168.56.72
+
+[dbsrvgrp]
+db01 ansible_host=192.168.56.73
+
+[datacenter:children]
+websrvgrp
+dbsrvgrp
+
+[datacenter:vars]
+ansible_user=vagrant 
+ansible_password=vagrant

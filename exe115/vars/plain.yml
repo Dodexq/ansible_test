@@ -1,0 +1,6 @@
+db_name: class9db2yu
+db_user: class9user2
+db_pass: "{{vault_db_pass}}"
+
+base_table_name: table1
+user_data_path: /opt/initialdata

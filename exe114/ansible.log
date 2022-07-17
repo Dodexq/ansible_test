@@ -1,0 +1,124 @@
+2022-06-04 09:24:34,805 p=18876 u=vagrant n=ansible | Encryption successful
+2022-06-04 09:25:53,750 p=18905 u=vagrant n=ansible | Decryption successful
+2022-06-04 09:26:42,519 p=18915 u=vagrant n=ansible | Encryption successful
+2022-06-04 09:51:19,082 p=19070 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/vagrant/exe114/learn_vault.yml': line 4, column 11, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  host: localhost
+    - name: include vars
+          ^ here
+
+2022-06-04 09:51:46,309 p=19078 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/vagrant/exe114/learn_vault.yml': line 4, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  host: localhost
+  - name: include vars
+  ^ here
+
+2022-06-04 09:52:13,311 p=19086 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  mapping values are not allowed in this context
+
+The error appears to be in '/vagrant/exe114/learn_vault.yml': line 4, column 11, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+  hosts: localhost
+    - name: include vars
+          ^ here
+
+2022-06-04 09:52:31,296 p=19093 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/vagrant/exe114/learn_vault.yml': line 8, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        dir: vars
+   - name: Show vars
+   ^ here
+
+2022-06-04 09:53:20,920 p=19105 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/vagrant/exe114/learn_vault.yml': line 8, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        dir: vars
+   - name: Show vars
+   ^ here
+
+2022-06-04 09:53:23,956 p=19111 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: No JSON object could be decoded
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/vagrant/exe114/learn_vault.yml': line 8, column 4, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+        dir: vars
+   - name: Show vars
+   ^ here
+
+2022-06-04 09:53:49,844 p=19119 u=vagrant n=ansible | PLAY [Create users] ***************************************************************************
+2022-06-04 09:53:49,851 p=19119 u=vagrant n=ansible | TASK [Gathering Facts] ************************************************************************
+2022-06-04 09:53:50,427 p=19119 u=vagrant n=ansible | ok: [localhost]
+2022-06-04 09:53:50,435 p=19119 u=vagrant n=ansible | TASK [include vars] ***************************************************************************
+2022-06-04 09:53:50,450 p=19119 u=vagrant n=ansible | ok: [localhost]
+2022-06-04 09:53:50,458 p=19119 u=vagrant n=ansible | TASK [Show vars] ******************************************************************************
+2022-06-04 09:53:50,475 p=19119 u=vagrant n=ansible | fatal: [localhost]: FAILED! => {"msg": "Attempting to decrypt but no vault secrets found"}
+2022-06-04 09:53:50,476 p=19119 u=vagrant n=ansible | PLAY RECAP ************************************************************************************
+2022-06-04 09:53:50,477 p=19119 u=vagrant n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2022-06-04 09:54:13,781 p=19194 u=vagrant n=ansible | PLAY [Create users] ***************************************************************************
+2022-06-04 09:54:13,787 p=19194 u=vagrant n=ansible | TASK [Gathering Facts] ************************************************************************
+2022-06-04 09:54:14,314 p=19194 u=vagrant n=ansible | ok: [localhost]
+2022-06-04 09:54:14,321 p=19194 u=vagrant n=ansible | TASK [include vars] ***************************************************************************
+2022-06-04 09:54:14,334 p=19194 u=vagrant n=ansible | ok: [localhost]
+2022-06-04 09:54:14,343 p=19194 u=vagrant n=ansible | TASK [Show vars] ******************************************************************************
+2022-06-04 09:54:14,376 p=19194 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Username: class9user, 3306, MyStrongPass0rd"
+}
+2022-06-04 09:54:14,380 p=19194 u=vagrant n=ansible | PLAY RECAP ************************************************************************************
+2022-06-04 09:54:14,381 p=19194 u=vagrant n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-04 10:00:36,423 p=19330 u=vagrant n=ansible | PLAY [Create users] ***************************************************************************
+2022-06-04 10:00:36,430 p=19330 u=vagrant n=ansible | TASK [Gathering Facts] ************************************************************************
+2022-06-04 10:00:36,961 p=19330 u=vagrant n=ansible | ok: [localhost]
+2022-06-04 10:00:36,969 p=19330 u=vagrant n=ansible | TASK [include vars] ***************************************************************************
+2022-06-04 10:00:36,997 p=19330 u=vagrant n=ansible | ok: [localhost]
+2022-06-04 10:00:37,005 p=19330 u=vagrant n=ansible | TASK [Show vars] ******************************************************************************
+2022-06-04 10:00:37,024 p=19330 u=vagrant n=ansible | ok: [localhost] => {
+    "msg": "Username: class9user, 3306, MyStr@ngPass0rd"
+}
+2022-06-04 10:00:37,028 p=19330 u=vagrant n=ansible | PLAY RECAP ************************************************************************************
+2022-06-04 10:00:37,029 p=19330 u=vagrant n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

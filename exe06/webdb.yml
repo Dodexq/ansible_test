@@ -1,0 +1,27 @@
+---
+- name: Setup Web server
+  hosts: websrvgrp
+  become: yes
+  tasks:
+    - name: Install apache2
+      apt:
+        name: apache2
+        state: present
+    - name: Start & enable apache2
+      service:
+        name: apache2
+        state: started
+        enabled: yes
+- name: Setup DB server
+  hosts: dbsrvgrp
+  become: yes
+  tasks:
+    - name: Install MySQL
+      yum:
+        name: mariadb-server
+        state: present
+    - name: Start & enabled MySQL
+      service:
+        name: mariadb
+        state: started
+        enabled: yes

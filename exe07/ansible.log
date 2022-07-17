@@ -1,0 +1,426 @@
+2022-06-02 18:30:00,814 p=30693 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:30:00,822 p=30693 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:30:01,659 p=30693 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:30:01,695 p=30693 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:30:01,729 p=30693 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:30:01,736 p=30693 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:30:02,172 p=30693 u=vagrant n=ansible | changed: [web02]
+2022-06-02 18:30:02,176 p=30693 u=vagrant n=ansible | changed: [db01]
+2022-06-02 18:30:02,178 p=30693 u=vagrant n=ansible | changed: [web01]
+2022-06-02 18:30:02,186 p=30693 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:30:02,226 p=30693 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1000
+    }
+}
+2022-06-02 18:30:02,236 p=30693 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1000
+    }
+}
+2022-06-02 18:30:02,247 p=30693 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser", 
+        "name": "playuser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1001
+    }
+}
+2022-06-02 18:30:02,249 p=30693 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:30:02,250 p=30693 u=vagrant n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:02,250 p=30693 u=vagrant n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:02,251 p=30693 u=vagrant n=ansible | web02                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:40,950 p=30829 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:30:40,958 p=30829 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:30:41,738 p=30829 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:30:41,755 p=30829 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:30:41,774 p=30829 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:30:41,781 p=30829 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:30:42,132 p=30829 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:30:42,142 p=30829 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:30:42,195 p=30829 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:30:42,202 p=30829 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:30:42,242 p=30829 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:30:42,254 p=30829 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:30:42,262 p=30829 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "uid": 1001
+    }
+}
+2022-06-02 18:30:42,264 p=30829 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:30:42,264 p=30829 u=vagrant n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:42,265 p=30829 u=vagrant n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:42,265 p=30829 u=vagrant n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:02,274 p=30953 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:31:02,282 p=30953 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:31:03,111 p=30953 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:03,117 p=30953 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:03,127 p=30953 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:03,134 p=30953 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:31:03,463 p=30953 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:03,471 p=30953 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:03,507 p=30953 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:03,510 p=30953 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:31:03,511 p=30953 u=vagrant n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:03,511 p=30953 u=vagrant n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:03,511 p=30953 u=vagrant n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:10,364 p=31069 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:31:10,373 p=31069 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:31:11,201 p=31069 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:11,212 p=31069 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:11,217 p=31069 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:11,223 p=31069 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:31:11,561 p=31069 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:11,579 p=31069 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:11,621 p=31069 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:11,627 p=31069 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:31:11,668 p=31069 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:31:11,680 p=31069 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:31:11,686 p=31069 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "uid": 1001
+    }
+}
+2022-06-02 18:31:11,689 p=31069 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:31:11,689 p=31069 u=vagrant n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:11,689 p=31069 u=vagrant n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:11,690 p=31069 u=vagrant n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:57,000 p=31197 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:31:57,008 p=31197 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:31:57,838 p=31197 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:57,857 p=31197 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:57,878 p=31197 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:57,884 p=31197 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:31:58,261 p=31197 u=vagrant n=ansible | changed: [web02]
+2022-06-02 18:31:58,278 p=31197 u=vagrant n=ansible | changed: [web01]
+2022-06-02 18:31:58,316 p=31197 u=vagrant n=ansible | changed: [db01]
+2022-06-02 18:31:58,323 p=31197 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:31:58,371 p=31197 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser1", 
+        "name": "playuser1", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1001
+    }
+}
+2022-06-02 18:31:58,374 p=31197 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser1", 
+        "name": "playuser1", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1001
+    }
+}
+2022-06-02 18:31:58,386 p=31197 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1002, 
+        "home": "/home/playuser1", 
+        "name": "playuser1", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1002
+    }
+}
+2022-06-02 18:31:58,389 p=31197 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:31:58,389 p=31197 u=vagrant n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:58,389 p=31197 u=vagrant n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:58,390 p=31197 u=vagrant n=ansible | web02                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:32:02,607 p=31319 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:32:02,615 p=31319 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:32:03,367 p=31319 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:32:03,401 p=31319 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:32:03,410 p=31319 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:32:03,416 p=31319 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:32:03,765 p=31319 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:32:03,767 p=31319 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:32:03,803 p=31319 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:32:03,810 p=31319 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:32:03,850 p=31319 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:32:03,861 p=31319 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:32:03,870 p=31319 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "uid": 1001
+    }
+}
+2022-06-02 18:32:03,872 p=31319 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:32:03,872 p=31319 u=vagrant n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:32:03,872 p=31319 u=vagrant n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:32:03,873 p=31319 u=vagrant n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:33:40,825 p=31449 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:33:40,833 p=31449 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:33:41,739 p=31449 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:33:41,750 p=31449 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:33:41,760 p=31449 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:33:41,768 p=31449 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:33:42,160 p=31449 u=vagrant n=ansible | changed: [web02]
+2022-06-02 18:33:42,172 p=31449 u=vagrant n=ansible | changed: [web01]
+2022-06-02 18:33:42,203 p=31449 u=vagrant n=ansible | changed: [db01]
+2022-06-02 18:33:42,209 p=31449 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:33:42,254 p=31449 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "User from group_vars/all", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1002, 
+        "home": "/home/globaluser", 
+        "name": "globaluser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1002
+    }
+}
+2022-06-02 18:33:42,264 p=31449 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "User from group_vars/all", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1002, 
+        "home": "/home/globaluser", 
+        "name": "globaluser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1002
+    }
+}
+2022-06-02 18:33:42,272 p=31449 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "User from group_vars/all", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1003, 
+        "home": "/home/globaluser", 
+        "name": "globaluser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1003
+    }
+}
+2022-06-02 18:33:42,274 p=31449 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:33:42,275 p=31449 u=vagrant n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:33:42,275 p=31449 u=vagrant n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:33:42,275 p=31449 u=vagrant n=ansible | web02                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:34:51,355 p=31586 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:34:51,363 p=31586 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:34:52,411 p=31586 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:34:52,446 p=31586 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:34:52,467 p=31586 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:34:52,477 p=31586 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:34:52,855 p=31586 u=vagrant n=ansible | changed: [web01]
+2022-06-02 18:34:52,867 p=31586 u=vagrant n=ansible | changed: [web02]
+2022-06-02 18:34:52,892 p=31586 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:34:52,899 p=31586 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:34:52,940 p=31586 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Msg from websrvgrp vars", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1003, 
+        "home": "/home/websrvuser", 
+        "name": "websrvuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1003
+    }
+}
+2022-06-02 18:34:52,952 p=31586 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Msg from websrvgrp vars", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1003, 
+        "home": "/home/websrvuser", 
+        "name": "websrvuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1003
+    }
+}
+2022-06-02 18:34:52,958 p=31586 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "User from group_vars/all", 
+        "failed": false, 
+        "group": 1003, 
+        "home": "/home/globaluser", 
+        "move_home": false, 
+        "name": "globaluser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "uid": 1003
+    }
+}
+2022-06-02 18:34:52,960 p=31586 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:34:52,960 p=31586 u=vagrant n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:34:52,960 p=31586 u=vagrant n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:34:52,960 p=31586 u=vagrant n=ansible | web02                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

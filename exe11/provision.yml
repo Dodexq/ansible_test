@@ -1,0 +1,88 @@
+- name: Provision a server
+  hosts: all
+  tasks:
+    - name: Install service on Debian
+      tags: 
+        - packages
+      block:
+        - name: Install NTP
+          apt:
+            name: "{{item}}"
+            state: present
+          loop:
+            - ntp
+            - unzip
+            - zip
+            - wget
+        - name: Start & enable NTP on Debian
+          service:
+            name: ntp
+            state: started
+            enabled: yes
+      when: ansible_os_family == "Debian"      
+      
+    - name: Install service on RedHat
+      tags:
+        - packages
+      block:
+        - name: Install NTP
+          yum:
+            name: "{{item}}"
+            state: present
+          loop: # Spisok
+            - ntp
+            - wget
+            - zip
+            - unzip
+        - name: Start & enable NTP on RedHat
+          service:
+            name: ntpd
+            state: started
+            enabled: yes
+      when: ansible_os_family == "RedHat"
+
+    - name: Add group
+      tags:
+        - system
+      group:
+        name: devops
+        state: present
+
+    - name: Create users
+      tags:
+        - system
+      user:
+        name: "{{item}}"
+        state: present
+        groups: devops
+      loop: "{{usernames}}"
+
+    - name: Banner file
+      copy:
+        content: "This {{ansible_distribution}} is managed by Ansible!\n"
+        dest: /etc/motd
+
+    - name: Deploy conf and Restart NTP on RedHat
+      tags:
+        - config
+      block:
+        - name: Deploy conf file for RedHat
+          template: 
+            src: templates/ntp_centos.conf.j2
+            dest: /etc/ntp.conf
+          notify:
+            - Restart NTP on RedHat
+      when: ansible_os_family == "RedHat"
+
+    - name: Dir for user data
+      file:
+        path: /opt/userdata
+        state: directory
+        mode: '0755'
+
+  handlers:
+    - name: Restart NTP on RedHat
+      service:
+        name: ntpd
+        state: restarted
+        enabled: yes

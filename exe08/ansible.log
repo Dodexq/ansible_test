@@ -1,0 +1,1478 @@
+2022-06-02 18:30:00,814 p=30693 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:30:00,822 p=30693 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:30:01,659 p=30693 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:30:01,695 p=30693 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:30:01,729 p=30693 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:30:01,736 p=30693 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:30:02,172 p=30693 u=vagrant n=ansible | changed: [web02]
+2022-06-02 18:30:02,176 p=30693 u=vagrant n=ansible | changed: [db01]
+2022-06-02 18:30:02,178 p=30693 u=vagrant n=ansible | changed: [web01]
+2022-06-02 18:30:02,186 p=30693 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:30:02,226 p=30693 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1000
+    }
+}
+2022-06-02 18:30:02,236 p=30693 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1000
+    }
+}
+2022-06-02 18:30:02,247 p=30693 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser", 
+        "name": "playuser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1001
+    }
+}
+2022-06-02 18:30:02,249 p=30693 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:30:02,250 p=30693 u=vagrant n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:02,250 p=30693 u=vagrant n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:02,251 p=30693 u=vagrant n=ansible | web02                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:40,950 p=30829 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:30:40,958 p=30829 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:30:41,738 p=30829 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:30:41,755 p=30829 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:30:41,774 p=30829 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:30:41,781 p=30829 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:30:42,132 p=30829 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:30:42,142 p=30829 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:30:42,195 p=30829 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:30:42,202 p=30829 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:30:42,242 p=30829 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:30:42,254 p=30829 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:30:42,262 p=30829 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "uid": 1001
+    }
+}
+2022-06-02 18:30:42,264 p=30829 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:30:42,264 p=30829 u=vagrant n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:42,265 p=30829 u=vagrant n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:30:42,265 p=30829 u=vagrant n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:02,274 p=30953 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:31:02,282 p=30953 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:31:03,111 p=30953 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:03,117 p=30953 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:03,127 p=30953 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:03,134 p=30953 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:31:03,463 p=30953 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:03,471 p=30953 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:03,507 p=30953 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:03,510 p=30953 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:31:03,511 p=30953 u=vagrant n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:03,511 p=30953 u=vagrant n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:03,511 p=30953 u=vagrant n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:10,364 p=31069 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:31:10,373 p=31069 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:31:11,201 p=31069 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:11,212 p=31069 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:11,217 p=31069 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:11,223 p=31069 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:31:11,561 p=31069 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:11,579 p=31069 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:11,621 p=31069 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:11,627 p=31069 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:31:11,668 p=31069 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:31:11,680 p=31069 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:31:11,686 p=31069 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "uid": 1001
+    }
+}
+2022-06-02 18:31:11,689 p=31069 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:31:11,689 p=31069 u=vagrant n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:11,689 p=31069 u=vagrant n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:11,690 p=31069 u=vagrant n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:57,000 p=31197 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:31:57,008 p=31197 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:31:57,838 p=31197 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:31:57,857 p=31197 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:31:57,878 p=31197 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:31:57,884 p=31197 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:31:58,261 p=31197 u=vagrant n=ansible | changed: [web02]
+2022-06-02 18:31:58,278 p=31197 u=vagrant n=ansible | changed: [web01]
+2022-06-02 18:31:58,316 p=31197 u=vagrant n=ansible | changed: [db01]
+2022-06-02 18:31:58,323 p=31197 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:31:58,371 p=31197 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser1", 
+        "name": "playuser1", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1001
+    }
+}
+2022-06-02 18:31:58,374 p=31197 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser1", 
+        "name": "playuser1", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1001
+    }
+}
+2022-06-02 18:31:58,386 p=31197 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Value from a playbook", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1002, 
+        "home": "/home/playuser1", 
+        "name": "playuser1", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1002
+    }
+}
+2022-06-02 18:31:58,389 p=31197 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:31:58,389 p=31197 u=vagrant n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:58,389 p=31197 u=vagrant n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:31:58,390 p=31197 u=vagrant n=ansible | web02                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:32:02,607 p=31319 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:32:02,615 p=31319 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:32:03,367 p=31319 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:32:03,401 p=31319 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:32:03,410 p=31319 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:32:03,416 p=31319 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:32:03,765 p=31319 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:32:03,767 p=31319 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:32:03,803 p=31319 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:32:03,810 p=31319 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:32:03,850 p=31319 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:32:03,861 p=31319 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1000, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "uid": 1000
+    }
+}
+2022-06-02 18:32:03,870 p=31319 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "Value from a playbook", 
+        "failed": false, 
+        "group": 1001, 
+        "home": "/home/playuser", 
+        "move_home": false, 
+        "name": "playuser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "uid": 1001
+    }
+}
+2022-06-02 18:32:03,872 p=31319 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:32:03,872 p=31319 u=vagrant n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:32:03,872 p=31319 u=vagrant n=ansible | web01                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:32:03,873 p=31319 u=vagrant n=ansible | web02                      : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:33:40,825 p=31449 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:33:40,833 p=31449 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:33:41,739 p=31449 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:33:41,750 p=31449 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:33:41,760 p=31449 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:33:41,768 p=31449 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:33:42,160 p=31449 u=vagrant n=ansible | changed: [web02]
+2022-06-02 18:33:42,172 p=31449 u=vagrant n=ansible | changed: [web01]
+2022-06-02 18:33:42,203 p=31449 u=vagrant n=ansible | changed: [db01]
+2022-06-02 18:33:42,209 p=31449 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:33:42,254 p=31449 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "User from group_vars/all", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1002, 
+        "home": "/home/globaluser", 
+        "name": "globaluser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1002
+    }
+}
+2022-06-02 18:33:42,264 p=31449 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "User from group_vars/all", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1002, 
+        "home": "/home/globaluser", 
+        "name": "globaluser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1002
+    }
+}
+2022-06-02 18:33:42,272 p=31449 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "User from group_vars/all", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1003, 
+        "home": "/home/globaluser", 
+        "name": "globaluser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1003
+    }
+}
+2022-06-02 18:33:42,274 p=31449 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:33:42,275 p=31449 u=vagrant n=ansible | db01                       : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:33:42,275 p=31449 u=vagrant n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:33:42,275 p=31449 u=vagrant n=ansible | web02                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:34:51,355 p=31586 u=vagrant n=ansible | PLAY [Precedence of vars] ******************************************************
+2022-06-02 18:34:51,363 p=31586 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:34:52,411 p=31586 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:34:52,446 p=31586 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:34:52,467 p=31586 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:34:52,477 p=31586 u=vagrant n=ansible | TASK [Create a user] ***********************************************************
+2022-06-02 18:34:52,855 p=31586 u=vagrant n=ansible | changed: [web01]
+2022-06-02 18:34:52,867 p=31586 u=vagrant n=ansible | changed: [web02]
+2022-06-02 18:34:52,892 p=31586 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:34:52,899 p=31586 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:34:52,940 p=31586 u=vagrant n=ansible | ok: [web01] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Msg from websrvgrp vars", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1003, 
+        "home": "/home/websrvuser", 
+        "name": "websrvuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1003
+    }
+}
+2022-06-02 18:34:52,952 p=31586 u=vagrant n=ansible | ok: [web02] => {
+    "USROUT": {
+        "changed": true, 
+        "comment": "Msg from websrvgrp vars", 
+        "create_home": true, 
+        "failed": false, 
+        "group": 1003, 
+        "home": "/home/websrvuser", 
+        "name": "websrvuser", 
+        "shell": "/bin/sh", 
+        "state": "present", 
+        "system": false, 
+        "uid": 1003
+    }
+}
+2022-06-02 18:34:52,958 p=31586 u=vagrant n=ansible | ok: [db01] => {
+    "USROUT": {
+        "append": false, 
+        "changed": false, 
+        "comment": "User from group_vars/all", 
+        "failed": false, 
+        "group": 1003, 
+        "home": "/home/globaluser", 
+        "move_home": false, 
+        "name": "globaluser", 
+        "shell": "/bin/bash", 
+        "state": "present", 
+        "uid": 1003
+    }
+}
+2022-06-02 18:34:52,960 p=31586 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:34:52,960 p=31586 u=vagrant n=ansible | db01                       : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:34:52,960 p=31586 u=vagrant n=ansible | web01                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:34:52,960 p=31586 u=vagrant n=ansible | web02                      : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:38:41,272 p=31757 u=vagrant n=ansible | web01 | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.2.15", 
+            "192.168.56.71"
+        ], 
+        "ansible_all_ipv6_addresses": [
+            "fe80::a00:27ff:fe78:8ef1", 
+            "fe80::a00:27ff:fea5:4fa2"
+        ], 
+        "ansible_apparmor": {
+            "status": "enabled"
+        }, 
+        "ansible_architecture": "x86_64", 
+        "ansible_bios_date": "12/01/2006", 
+        "ansible_bios_version": "VirtualBox", 
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-4.15.0-156-generic", 
+            "quiet": true, 
+            "ro": true, 
+            "root": "/dev/mapper/vagrant--vg-root", 
+            "splash": true
+        }, 
+        "ansible_date_time": {
+            "date": "2022-06-02", 
+            "day": "02", 
+            "epoch": "1654195121", 
+            "hour": "18", 
+            "iso8601": "2022-06-02T18:38:41Z", 
+            "iso8601_basic": "20220602T183841313243", 
+            "iso8601_basic_short": "20220602T183841", 
+            "iso8601_micro": "2022-06-02T18:38:41.313243Z", 
+            "minute": "38", 
+            "month": "06", 
+            "second": "41", 
+            "time": "18:38:41", 
+            "tz": "UTC", 
+            "tz_offset": "+0000", 
+            "weekday": "Thursday", 
+            "weekday_number": "4", 
+            "weeknumber": "22", 
+            "year": "2022"
+        }, 
+        "ansible_default_ipv4": {
+            "address": "10.0.2.15", 
+            "alias": "enp0s3", 
+            "broadcast": "10.0.2.255", 
+            "gateway": "10.0.2.2", 
+            "interface": "enp0s3", 
+            "macaddress": "08:00:27:78:8e:f1", 
+            "mtu": 1500, 
+            "netmask": "255.255.255.0", 
+            "network": "10.0.2.0", 
+            "type": "ether"
+        }, 
+        "ansible_default_ipv6": {}, 
+        "ansible_device_links": {
+            "ids": {
+                "dm-0": [
+                    "dm-name-vagrant--vg-root", 
+                    "dm-uuid-LVM-h3Nfz4IMYBJ0dK7CK2OU29uU8FrrqmGHqjX5sduYdbRopvoPqJ3lE6SqsVzSBcWb"
+                ], 
+                "dm-1": [
+                    "dm-name-vagrant--vg-swap_1", 
+                    "dm-uuid-LVM-h3Nfz4IMYBJ0dK7CK2OU29uU8FrrqmGH8i7PH3Wpm159VNM1wGwX0E5t2qoRWL4H"
+                ], 
+                "sda": [
+                    "ata-VBOX_HARDDISK_VB6994e05e-8db614ad"
+                ], 
+                "sda1": [
+                    "ata-VBOX_HARDDISK_VB6994e05e-8db614ad-part1", 
+                    "lvm-pv-uuid-XxFyiY-zwWV-H60Y-Jdmb-uCXq-hKLn-YHumgG"
+                ]
+            }, 
+            "labels": {}, 
+            "masters": {
+                "sda1": [
+                    "dm-0", 
+                    "dm-1"
+                ]
+            }, 
+            "uuids": {
+                "dm-0": [
+                    "a652b4cc-63ca-4a44-a0cd-c75b0b1653c6"
+                ], 
+                "dm-1": [
+                    "21eb0850-3fc5-490c-8eb0-3e83cd6aec8e"
+                ]
+            }
+        }, 
+        "ansible_devices": {
+            "dm-0": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [
+                        "dm-name-vagrant--vg-root", 
+                        "dm-uuid-LVM-h3Nfz4IMYBJ0dK7CK2OU29uU8FrrqmGHqjX5sduYdbRopvoPqJ3lE6SqsVzSBcWb"
+                    ], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": [
+                        "a652b4cc-63ca-4a44-a0cd-c75b0b1653c6"
+                    ]
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "165756928", 
+                "sectorsize": "512", 
+                "size": "79.04 GB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "dm-1": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [
+                        "dm-name-vagrant--vg-swap_1", 
+                        "dm-uuid-LVM-h3Nfz4IMYBJ0dK7CK2OU29uU8FrrqmGH8i7PH3Wpm159VNM1wGwX0E5t2qoRWL4H"
+                    ], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": [
+                        "21eb0850-3fc5-490c-8eb0-3e83cd6aec8e"
+                    ]
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "", 
+                "sectors": "2007040", 
+                "sectorsize": "512", 
+                "size": "980.00 MB", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop0": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "none", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "4096", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop1": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "none", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop2": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "none", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop3": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "none", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop4": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "none", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop5": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "none", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop6": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "none", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "loop7": {
+                "holders": [], 
+                "host": "", 
+                "links": {
+                    "ids": [], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": null, 
+                "partitions": {}, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "none", 
+                "sectors": "0", 
+                "sectorsize": "512", 
+                "size": "0.00 Bytes", 
+                "support_discard": "0", 
+                "vendor": null, 
+                "virtual": 1
+            }, 
+            "sda": {
+                "holders": [], 
+                "host": "IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)", 
+                "links": {
+                    "ids": [
+                        "ata-VBOX_HARDDISK_VB6994e05e-8db614ad"
+                    ], 
+                    "labels": [], 
+                    "masters": [], 
+                    "uuids": []
+                }, 
+                "model": "VBOX HARDDISK", 
+                "partitions": {
+                    "sda1": {
+                        "holders": [
+                            "vagrant--vg-swap_1", 
+                            "vagrant--vg-root"
+                        ], 
+                        "links": {
+                            "ids": [
+                                "ata-VBOX_HARDDISK_VB6994e05e-8db614ad-part1", 
+                                "lvm-pv-uuid-XxFyiY-zwWV-H60Y-Jdmb-uCXq-hKLn-YHumgG"
+                            ], 
+                            "labels": [], 
+                            "masters": [
+                                "dm-0", 
+                                "dm-1"
+                            ], 
+                            "uuids": []
+                        }, 
+                        "sectors": "167768064", 
+                        "sectorsize": 512, 
+                        "size": "80.00 GB", 
+                        "start": "2048", 
+                        "uuid": null
+                    }
+                }, 
+                "removable": "0", 
+                "rotational": "1", 
+                "sas_address": null, 
+                "sas_device_handle": null, 
+                "scheduler_mode": "cfq", 
+                "sectors": "167772160", 
+                "sectorsize": "512", 
+                "size": "80.00 GB", 
+                "support_discard": "0", 
+                "vendor": "ATA", 
+                "virtual": 1
+            }
+        }, 
+        "ansible_distribution": "Ubuntu", 
+        "ansible_distribution_file_parsed": true, 
+        "ansible_distribution_file_path": "/etc/os-release", 
+        "ansible_distribution_file_variety": "Debian", 
+        "ansible_distribution_major_version": "18", 
+        "ansible_distribution_release": "bionic", 
+        "ansible_distribution_version": "18.04", 
+        "ansible_dns": {
+            "nameservers": [
+                "127.0.0.53"
+            ], 
+            "options": {
+                "edns0": true
+            }
+        }, 
+        "ansible_domain": "", 
+        "ansible_effective_group_id": 0, 
+        "ansible_effective_user_id": 0, 
+        "ansible_enp0s3": {
+            "active": true, 
+            "device": "enp0s3", 
+            "ipv4": {
+                "address": "10.0.2.15", 
+                "broadcast": "10.0.2.255", 
+                "netmask": "255.255.255.0", 
+                "network": "10.0.2.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:fe78:8ef1", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:78:8e:f1", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "pciid": "0000:00:03.0", 
+            "promisc": false, 
+            "speed": 1000, 
+            "type": "ether"
+        }, 
+        "ansible_enp0s8": {
+            "active": true, 
+            "device": "enp0s8", 
+            "ipv4": {
+                "address": "192.168.56.71", 
+                "broadcast": "192.168.56.255", 
+                "netmask": "255.255.255.0", 
+                "network": "192.168.56.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:fea5:4fa2", 
+                    "prefix": "64", 
+                    "scope": "link"
+                }
+            ], 
+            "macaddress": "08:00:27:a5:4f:a2", 
+            "module": "e1000", 
+            "mtu": 1500, 
+            "pciid": "0000:00:08.0", 
+            "promisc": false, 
+            "speed": 1000, 
+            "type": "ether"
+        }, 
+        "ansible_env": {
+            "HOME": "/root", 
+            "LANG": "en_US.UTF-8", 
+            "LANGUAGE": "en_US:", 
+            "LC_ADDRESS": "en_GB.UTF-8", 
+            "LC_IDENTIFICATION": "en_GB.UTF-8", 
+            "LC_MEASUREMENT": "en_GB.UTF-8", 
+            "LC_MONETARY": "en_GB.UTF-8", 
+            "LC_NAME": "en_GB.UTF-8", 
+            "LC_NUMERIC": "en_GB.UTF-8", 
+            "LC_PAPER": "en_GB.UTF-8", 
+            "LC_TELEPHONE": "en_GB.UTF-8", 
+            "LC_TIME": "en_GB.UTF-8", 
+            "LOGNAME": "root", 
+            "MAIL": "/var/mail/root", 
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin", 
+            "PWD": "/home/vagrant", 
+            "SHELL": "/bin/bash", 
+            "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-wmxdvxjzsvexlpiwxmazgcbxgacaiauc ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1654195120.7-31763-280035464985370/AnsiballZ_setup.py", 
+            "SUDO_GID": "900", 
+            "SUDO_UID": "900", 
+            "SUDO_USER": "vagrant", 
+            "TERM": "xterm-256color", 
+            "USER": "root", 
+            "USERNAME": "root"
+        }, 
+        "ansible_fibre_channel_wwn": [], 
+        "ansible_fips": false, 
+        "ansible_form_factor": "Other", 
+        "ansible_fqdn": "web01", 
+        "ansible_hostname": "web01", 
+        "ansible_hostnqn": "", 
+        "ansible_interfaces": [
+            "lo", 
+            "enp0s3", 
+            "enp0s8"
+        ], 
+        "ansible_is_chroot": false, 
+        "ansible_iscsi_iqn": "", 
+        "ansible_kernel": "4.15.0-156-generic", 
+        "ansible_kernel_version": "#163-Ubuntu SMP Thu Aug 19 23:31:58 UTC 2021", 
+        "ansible_lo": {
+            "active": true, 
+            "device": "lo", 
+            "ipv4": {
+                "address": "127.0.0.1", 
+                "broadcast": "", 
+                "netmask": "255.0.0.0", 
+                "network": "127.0.0.0"
+            }, 
+            "ipv6": [
+                {
+                    "address": "::1", 
+                    "prefix": "128", 
+                    "scope": "host"
+                }
+            ], 
+            "mtu": 65536, 
+            "promisc": false, 
+            "type": "loopback"
+        }, 
+        "ansible_local": {}, 
+        "ansible_lsb": {
+            "codename": "bionic", 
+            "description": "Ubuntu 18.04.6 LTS", 
+            "id": "Ubuntu", 
+            "major_release": "18", 
+            "release": "18.04"
+        }, 
+        "ansible_lvm": {
+            "lvs": {
+                "root": {
+                    "size_g": "79.04", 
+                    "vg": "vagrant-vg"
+                }, 
+                "swap_1": {
+                    "size_g": "0.96", 
+                    "vg": "vagrant-vg"
+                }
+            }, 
+            "pvs": {
+                "/dev/sda1": {
+                    "free_g": "0", 
+                    "size_g": "80.00", 
+                    "vg": "vagrant-vg"
+                }
+            }, 
+            "vgs": {
+                "vagrant-vg": {
+                    "free_g": "0", 
+                    "num_lvs": "2", 
+                    "num_pvs": "1", 
+                    "size_g": "80.00"
+                }
+            }
+        }, 
+        "ansible_machine": "x86_64", 
+        "ansible_machine_id": "3cd3d25af22c4c1dbc6fd312f6145986", 
+        "ansible_memfree_mb": 237, 
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 855, 
+                "used": 130
+            }, 
+            "real": {
+                "free": 237, 
+                "total": 985, 
+                "used": 748
+            }, 
+            "swap": {
+                "cached": 0, 
+                "free": 978, 
+                "total": 979, 
+                "used": 1
+            }
+        }, 
+        "ansible_memtotal_mb": 985, 
+        "ansible_mounts": [
+            {
+                "block_available": 18661232, 
+                "block_size": 4096, 
+                "block_total": 20263028, 
+                "block_used": 1601796, 
+                "device": "/dev/mapper/vagrant--vg-root", 
+                "fstype": "ext4", 
+                "inode_available": 5107089, 
+                "inode_total": 5185536, 
+                "inode_used": 78447, 
+                "mount": "/", 
+                "options": "rw,relatime,errors=remount-ro,data=ordered", 
+                "size_available": 76436406272, 
+                "size_total": 82997362688, 
+                "uuid": "a652b4cc-63ca-4a44-a0cd-c75b0b1653c6"
+            }
+        ], 
+        "ansible_nodename": "web01", 
+        "ansible_os_family": "Debian", 
+        "ansible_pkg_mgr": "apt", 
+        "ansible_proc_cmdline": {
+            "BOOT_IMAGE": "/boot/vmlinuz-4.15.0-156-generic", 
+            "quiet": true, 
+            "ro": true, 
+            "root": "/dev/mapper/vagrant--vg-root", 
+            "splash": true
+        }, 
+        "ansible_processor": [
+            "0", 
+            "AuthenticAMD", 
+            "AMD Ryzen 7 5800H with Radeon Graphics"
+        ], 
+        "ansible_processor_cores": 1, 
+        "ansible_processor_count": 1, 
+        "ansible_processor_threads_per_core": 1, 
+        "ansible_processor_vcpus": 1, 
+        "ansible_product_name": "VirtualBox", 
+        "ansible_product_serial": "0", 
+        "ansible_product_uuid": "ECB9D8A7-085A-9E4D-9F84-E31A5462A511", 
+        "ansible_product_version": "1.2", 
+        "ansible_python": {
+            "executable": "/usr/bin/python", 
+            "has_sslcontext": true, 
+            "type": "CPython", 
+            "version": {
+                "major": 2, 
+                "micro": 17, 
+                "minor": 7, 
+                "releaselevel": "final", 
+                "serial": 0
+            }, 
+            "version_info": [
+                2, 
+                7, 
+                17, 
+                "final", 
+                0
+            ]
+        }, 
+        "ansible_python_version": "2.7.17", 
+        "ansible_real_group_id": 0, 
+        "ansible_real_user_id": 0, 
+        "ansible_selinux": {
+            "status": "Missing selinux Python library"
+        }, 
+        "ansible_selinux_python_present": false, 
+        "ansible_service_mgr": "systemd", 
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBBpSYbO7Xfs/HC/FlTQNmJ9XgBjx+tZ+aK4J15yV3WgmcH2e9DrEch0qBSM82U/wyx275fj5YEVqPcDruAwewg=", 
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIKvD37E/lfX3xGnSgv4P9VM3RIqRb5kCMgdRJNZmyZMA", 
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDq0jBj5p1ipCAM8h8hoftRXZBEE5/HsswNjx2MvMUd8Q5gDWEKN90j9kKJu6j6A6OvScoEqzaJVNSPvDtA3BURwVdKudXihGLHbJoNbEp5N2L7THn82iugkziAGMxNDrQcG/dt5+RpFYcCoRj55lfvPUlm8c6Onz79LYi9rAwSpff46B8iuqCSbgPQgqirSpBa3fP+cF2yvsjZCnCZxGB6IPUX5xjE22KAvZu3iueTwg+rWo8EVhSGrfvzEdeeQaBXHsrefl7emvWEaYNwFQ5c2Hnc+2zmPdEVIx4da2+IiyNskRPRb+XPlyMZs46bh7AukmQMYAl5OmDP4F+wWx7D", 
+        "ansible_swapfree_mb": 978, 
+        "ansible_swaptotal_mb": 979, 
+        "ansible_system": "Linux", 
+        "ansible_system_capabilities": [
+            "cap_chown", 
+            "cap_dac_override", 
+            "cap_dac_read_search", 
+            "cap_fowner", 
+            "cap_fsetid", 
+            "cap_kill", 
+            "cap_setgid", 
+            "cap_setuid", 
+            "cap_setpcap", 
+            "cap_linux_immutable", 
+            "cap_net_bind_service", 
+            "cap_net_broadcast", 
+            "cap_net_admin", 
+            "cap_net_raw", 
+            "cap_ipc_lock", 
+            "cap_ipc_owner", 
+            "cap_sys_module", 
+            "cap_sys_rawio", 
+            "cap_sys_chroot", 
+            "cap_sys_ptrace", 
+            "cap_sys_pacct", 
+            "cap_sys_admin", 
+            "cap_sys_boot", 
+            "cap_sys_nice", 
+            "cap_sys_resource", 
+            "cap_sys_time", 
+            "cap_sys_tty_config", 
+            "cap_mknod", 
+            "cap_lease", 
+            "cap_audit_write", 
+            "cap_audit_control", 
+            "cap_setfcap", 
+            "cap_mac_override", 
+            "cap_mac_admin", 
+            "cap_syslog", 
+            "cap_wake_alarm", 
+            "cap_block_suspend", 
+            "cap_audit_read+ep"
+        ], 
+        "ansible_system_capabilities_enforced": "True", 
+        "ansible_system_vendor": "innotek GmbH", 
+        "ansible_uptime_seconds": 29277, 
+        "ansible_user_dir": "/root", 
+        "ansible_user_gecos": "root", 
+        "ansible_user_gid": 0, 
+        "ansible_user_id": "root", 
+        "ansible_user_shell": "/bin/bash", 
+        "ansible_user_uid": 0, 
+        "ansible_userspace_architecture": "x86_64", 
+        "ansible_userspace_bits": "64", 
+        "ansible_virtualization_role": "guest", 
+        "ansible_virtualization_type": "virtualbox", 
+        "discovered_interpreter_python": "/usr/bin/python", 
+        "gather_subset": [
+            "all"
+        ], 
+        "module_setup": true
+    }, 
+    "changed": false
+}
+2022-06-02 18:58:15,747 p=31910 u=vagrant n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/vagrant/exe08/print_facts.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Learn fact vars
+  ^ here
+
+2022-06-02 18:58:23,577 p=31916 u=vagrant n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/vagrant/exe08/print_facts.yml': line 1, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: Learn fact vars
+  ^ here
+
+2022-06-02 18:58:46,928 p=31924 u=vagrant n=ansible | PLAY [Learn fact vars] *********************************************************
+2022-06-02 18:58:46,937 p=31924 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 18:58:47,886 p=31924 u=vagrant n=ansible | ok: [web01]
+2022-06-02 18:58:47,904 p=31924 u=vagrant n=ansible | ok: [web02]
+2022-06-02 18:58:47,923 p=31924 u=vagrant n=ansible | ok: [db01]
+2022-06-02 18:58:47,931 p=31924 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 18:58:47,973 p=31924 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 18:58:47,975 p=31924 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 18:58:47,985 p=31924 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_os_family": "RedHat"
+}
+2022-06-02 18:58:47,988 p=31924 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 18:58:47,988 p=31924 u=vagrant n=ansible | db01                       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:58:47,988 p=31924 u=vagrant n=ansible | web01                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:58:47,989 p=31924 u=vagrant n=ansible | web02                      : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 18:59:59,462 p=32015 u=vagrant n=ansible | PLAY [Learn fact vars] *********************************************************
+2022-06-02 18:59:59,471 p=32015 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 19:00:00,516 p=32015 u=vagrant n=ansible | ok: [web01]
+2022-06-02 19:00:00,533 p=32015 u=vagrant n=ansible | ok: [web02]
+2022-06-02 19:00:00,551 p=32015 u=vagrant n=ansible | ok: [db01]
+2022-06-02 19:00:00,558 p=32015 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:00,599 p=32015 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 19:00:00,608 p=32015 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 19:00:00,614 p=32015 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_os_family": "RedHat"
+}
+2022-06-02 19:00:00,620 p=32015 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:00,659 p=32015 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 855, 
+            "used": 130
+        }, 
+        "real": {
+            "free": 236, 
+            "total": 985, 
+            "used": 749
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 978, 
+            "total": 979, 
+            "used": 1
+        }
+    }
+}
+2022-06-02 19:00:00,670 p=32015 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 854, 
+            "used": 131
+        }, 
+        "real": {
+            "free": 238, 
+            "total": 985, 
+            "used": 747
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 978, 
+            "total": 979, 
+            "used": 1
+        }
+    }
+}
+2022-06-02 19:00:00,680 p=32015 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 690, 
+            "used": 300
+        }, 
+        "real": {
+            "free": 205, 
+            "total": 990, 
+            "used": 785
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 1023, 
+            "total": 1023, 
+            "used": 0
+        }
+    }
+}
+2022-06-02 19:00:00,687 p=32015 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:00,731 p=32015 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_memory_free": "VARIABLE IS NOT DEFINED!"
+}
+2022-06-02 19:00:00,733 p=32015 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_memory_free": "VARIABLE IS NOT DEFINED!"
+}
+2022-06-02 19:00:00,742 p=32015 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_memory_free": "VARIABLE IS NOT DEFINED!"
+}
+2022-06-02 19:00:00,744 p=32015 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 19:00:00,744 p=32015 u=vagrant n=ansible | db01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:00:00,744 p=32015 u=vagrant n=ansible | web01                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:00:00,745 p=32015 u=vagrant n=ansible | web02                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:00:18,976 p=32112 u=vagrant n=ansible | PLAY [Learn fact vars] *********************************************************
+2022-06-02 19:00:18,985 p=32112 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 19:00:19,804 p=32112 u=vagrant n=ansible | ok: [web02]
+2022-06-02 19:00:19,854 p=32112 u=vagrant n=ansible | ok: [web01]
+2022-06-02 19:00:19,899 p=32112 u=vagrant n=ansible | ok: [db01]
+2022-06-02 19:00:19,906 p=32112 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:19,949 p=32112 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 19:00:19,954 p=32112 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 19:00:19,961 p=32112 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_os_family": "RedHat"
+}
+2022-06-02 19:00:19,968 p=32112 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:20,008 p=32112 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 855, 
+            "used": 130
+        }, 
+        "real": {
+            "free": 236, 
+            "total": 985, 
+            "used": 749
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 978, 
+            "total": 979, 
+            "used": 1
+        }
+    }
+}
+2022-06-02 19:00:20,021 p=32112 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 854, 
+            "used": 131
+        }, 
+        "real": {
+            "free": 238, 
+            "total": 985, 
+            "used": 747
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 978, 
+            "total": 979, 
+            "used": 1
+        }
+    }
+}
+2022-06-02 19:00:20,030 p=32112 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 690, 
+            "used": 300
+        }, 
+        "real": {
+            "free": 205, 
+            "total": 990, 
+            "used": 785
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 1023, 
+            "total": 1023, 
+            "used": 0
+        }
+    }
+}
+2022-06-02 19:00:20,036 p=32112 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:20,077 p=32112 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_memory_mb.free": "VARIABLE IS NOT DEFINED!"
+}
+2022-06-02 19:00:20,084 p=32112 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_memory_mb.free": "VARIABLE IS NOT DEFINED!"
+}
+2022-06-02 19:00:20,091 p=32112 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_memory_mb.free": "VARIABLE IS NOT DEFINED!"
+}
+2022-06-02 19:00:20,093 p=32112 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 19:00:20,094 p=32112 u=vagrant n=ansible | db01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:00:20,094 p=32112 u=vagrant n=ansible | web01                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:00:20,094 p=32112 u=vagrant n=ansible | web02                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:00:35,478 p=32200 u=vagrant n=ansible | PLAY [Learn fact vars] *********************************************************
+2022-06-02 19:00:35,486 p=32200 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 19:00:36,367 p=32200 u=vagrant n=ansible | ok: [web02]
+2022-06-02 19:00:36,401 p=32200 u=vagrant n=ansible | ok: [web01]
+2022-06-02 19:00:36,420 p=32200 u=vagrant n=ansible | ok: [db01]
+2022-06-02 19:00:36,428 p=32200 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:36,467 p=32200 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 19:00:36,472 p=32200 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 19:00:36,481 p=32200 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_os_family": "RedHat"
+}
+2022-06-02 19:00:36,488 p=32200 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:36,533 p=32200 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 855, 
+            "used": 130
+        }, 
+        "real": {
+            "free": 236, 
+            "total": 985, 
+            "used": 749
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 978, 
+            "total": 979, 
+            "used": 1
+        }
+    }
+}
+2022-06-02 19:00:36,541 p=32200 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 854, 
+            "used": 131
+        }, 
+        "real": {
+            "free": 238, 
+            "total": 985, 
+            "used": 747
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 978, 
+            "total": 979, 
+            "used": 1
+        }
+    }
+}
+2022-06-02 19:00:36,551 p=32200 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 689, 
+            "used": 301
+        }, 
+        "real": {
+            "free": 204, 
+            "total": 990, 
+            "used": 786
+        }, 
+        "swap": {
+            "cached": 0, 
+            "free": 1023, 
+            "total": 1023, 
+            "used": 0
+        }
+    }
+}
+2022-06-02 19:00:36,557 p=32200 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:00:36,600 p=32200 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_memory_mb.real.free": "236"
+}
+2022-06-02 19:00:36,612 p=32200 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_memory_mb.real.free": "238"
+}
+2022-06-02 19:00:36,618 p=32200 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_memory_mb.real.free": "204"
+}
+2022-06-02 19:00:36,619 p=32200 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 19:00:36,619 p=32200 u=vagrant n=ansible | db01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:00:36,620 p=32200 u=vagrant n=ansible | web01                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:00:36,620 p=32200 u=vagrant n=ansible | web02                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:01:54,649 p=32292 u=vagrant n=ansible | PLAY [Learn fact vars] *********************************************************
+2022-06-02 19:01:54,657 p=32292 u=vagrant n=ansible | TASK [Gathering Facts] *********************************************************
+2022-06-02 19:01:55,707 p=32292 u=vagrant n=ansible | ok: [web02]
+2022-06-02 19:01:55,714 p=32292 u=vagrant n=ansible | ok: [web01]
+2022-06-02 19:01:55,733 p=32292 u=vagrant n=ansible | ok: [db01]
+2022-06-02 19:01:55,741 p=32292 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:01:55,778 p=32292 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 19:01:55,788 p=32292 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_os_family": "Debian"
+}
+2022-06-02 19:01:55,795 p=32292 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_os_family": "RedHat"
+}
+2022-06-02 19:01:55,802 p=32292 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:01:55,843 p=32292 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_memory_mb.real.free": "236"
+}
+2022-06-02 19:01:55,846 p=32292 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_memory_mb.real.free": "238"
+}
+2022-06-02 19:01:55,856 p=32292 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_memory_mb.real.free": "205"
+}
+2022-06-02 19:01:55,861 p=32292 u=vagrant n=ansible | TASK [debug] *******************************************************************
+2022-06-02 19:01:55,903 p=32292 u=vagrant n=ansible | ok: [web01] => {
+    "ansible_processor": [
+        "0", 
+        "AuthenticAMD", 
+        "AMD Ryzen 7 5800H with Radeon Graphics"
+    ]
+}
+2022-06-02 19:01:55,907 p=32292 u=vagrant n=ansible | ok: [web02] => {
+    "ansible_processor": [
+        "0", 
+        "AuthenticAMD", 
+        "AMD Ryzen 7 5800H with Radeon Graphics"
+    ]
+}
+2022-06-02 19:01:55,917 p=32292 u=vagrant n=ansible | ok: [db01] => {
+    "ansible_processor": [
+        "0", 
+        "AuthenticAMD", 
+        "AMD Ryzen 7 5800H with Radeon Graphics"
+    ]
+}
+2022-06-02 19:01:55,919 p=32292 u=vagrant n=ansible | PLAY RECAP *********************************************************************
+2022-06-02 19:01:55,920 p=32292 u=vagrant n=ansible | db01                       : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:01:55,920 p=32292 u=vagrant n=ansible | web01                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2022-06-02 19:01:55,920 p=32292 u=vagrant n=ansible | web02                      : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

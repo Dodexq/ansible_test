@@ -1,0 +1,5 @@
+    - name: Restart NTP on RedHat
+      service:
+        name: ntpd
+        state: restarted
+        enabled: yes

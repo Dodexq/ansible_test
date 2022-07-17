@@ -1,0 +1,9 @@
+- name: Learn fact vars
+  hosts: all
+  tasks:
+    - debug:
+        var: ansible_os_family
+    - debug:
+        var: ansible_memory_mb.real.free
+    - debug:
+        var: ansible_processor

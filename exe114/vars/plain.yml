@@ -1,0 +1,3 @@
+db_user: class9user
+db_port: 3306
+db_pass: "{{vault_db_pass}}"

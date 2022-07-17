@@ -1,0 +1,6 @@
+- name: Provision a server
+  hosts: all
+  roles:
+    - role: post-install
+      vars:
+        ntp0: 0.centos.pool.ntp.org

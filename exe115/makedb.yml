@@ -1,0 +1,62 @@
+---
+- name: Deploy db with user data
+  hosts: dbsrvgrp
+  tasks:
+    - name: Include variables
+      include_vars:
+        dir: vars
+    - name: Create db and user
+      tags:
+        ddl
+      block:
+        - name: Create db
+          mysql_db:
+            name: "{{db_name}}"
+            state: present
+
+        - name: Create user
+          no_log: yes
+          mysql_user:
+            name: "{{db_user}}"
+            state: present
+            password: "{{db_pass}}"
+            priv: '*.*:ALL'
+
+        - name: Create table
+          no_log: yes
+          community.mysql.mysql_query:
+            login_db: "{{db_name}}"
+            login_user: "{{db_user}}"
+            login_password: "{{db_pass}}"
+            query:
+              CREATE TABLE IF NOT EXISTS {{base_table_name}} (col1 INT, col2 VARCHAR(100))
+
+    - name: Deploy userdata
+      tags:
+        dmi
+      block:
+        - name: Create user dir
+          file:
+            path: "{{user_data_path}}"
+            state: directory
+            mode: 0775
+
+        - name: Deploy the data
+          copy:
+            src: files/initial_data.csv
+            dest: "{{user_data_path}}/{{base_table_name}}.csv"
+        
+        - name: Truncate target table
+          no_log: yes
+          community.mysql.mysql_query:
+            login_db: "{{db_name}}"
+            login_user: "{{db_user}}"
+            login_password: "{{db_pass}}"
+            query:
+              TRUNCATE TABLE {{base_table_name}}
+
+        - name: Upload data from file
+          shell:
+            mysqlimport --ignore-lines=1 --fields-terminated-by='\t' \
+                        --columns='col1,col2' --local -u root --password= \
+                        "{{db_name}}" "{{user_data_path}}/{{base_table_name}}.csv"

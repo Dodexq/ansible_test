@@ -1,0 +1,38 @@
+- name: Setup DBServer
+  hosts: dbsrvgrp
+
+  vars:
+    dbname: groups
+    dbuser: devops
+    dbpass: lesson234
+
+  tasks:
+    - name: Install MySQL service
+      yum:
+        name: mariadb-server
+        state: present
+    
+    - name: Install Python MySQL
+      yum:
+        name: MySQL-python
+        state: present
+    
+    - name: Start & Enable MySQL
+      service:
+        name: mariadb
+        state: started
+        enabled: yes
+    
+    - name: Create database
+      mysql_db:
+        name: "{{dbname}}"
+        state: present
+
+    - name: Create database user
+      no_log: True
+      mysql_user:
+        name: "{{dbuser}}"
+        password: "{{dbpass}}"
+        priv: '*.*:ALL,GRANT'
+        state: present
+

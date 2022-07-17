@@ -1,0 +1,14 @@
+- name: Precedence of vars
+  hosts: all
+  #vars:
+  #  USRNM: playuser
+  #  COMM: Value from a playbook
+  tasks:
+    - name: Create a user
+      user:
+        name: "{{USRNM}}"
+        comment: "{{COMM}}"
+      register: USROUT
+
+    - debug:
+        var: USROUT

@@ -1,0 +1,12 @@
+usernames: 
+ - user1
+ - user2
+ - user3
+ - user4
+ - user5
+ - user6
+
+ ntp0: 0.ru.pool.ntp.org
+ ntp1: 1.ru.pool.ntp.org
+ ntp2: 2.ru.pool.ntp.org
+ ntp3: 3.ru.pool.ntp.org
